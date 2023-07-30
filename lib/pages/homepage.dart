@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     HeaderWidget(user: user!),
                     const SizedBox(
-                      height: 200,
+                      height: 165,
                     ),
                     FeaturesWidget(features: user!.features!),
                     const SizedBox(
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 Positioned(
-                  top: (AppSettings.screenHeight / 5) - 25,
+                  top: (AppSettings.screenHeight / 5) - 40,
                   child: BalanceWidget(account: user!.account!),
                 )
               ],
