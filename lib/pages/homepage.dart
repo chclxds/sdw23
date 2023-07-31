@@ -58,30 +58,32 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
-            body: Stack(
-              children: [
-                Column(
-                  children: [
-                    HeaderWidget(user: user!),
-                    const SizedBox(
-                      height: 165,
-                    ),
-                    FeaturesWidget(features: user!.features!),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    CardWidget(card: user!.card!),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    InfoCardsWidget(news: user!.news!),
-                  ],
-                ),
-                Positioned(
-                  top: (AppSettings.screenHeight / 5) - 40,
-                  child: BalanceWidget(account: user!.account!),
-                )
-              ],
+            body: SingleChildScrollView(
+              child: Stack(
+                children: [
+                  Column(
+                    children: [
+                      HeaderWidget(user: user!),
+                      const SizedBox(
+                        height: 185,
+                      ),
+                      FeaturesWidget(features: user!.features!),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      CardWidget(card: user!.card!),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      InfoCardsWidget(news: user!.news!),
+                    ],
+                  ),
+                  Positioned(
+                    top: (AppSettings.screenHeight / 5) - 25,
+                    child: BalanceWidget(account: user!.account!),
+                  )
+                ],
+              ),
             ),
           );
   }
