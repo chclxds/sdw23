@@ -14,14 +14,14 @@ class BalanceWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      width: AppSettings.screenHeight,
+      width: AppSettings.screenWidth,
       child: Card(
         margin: const EdgeInsets.symmetric(horizontal: 16),
         child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
           decoration: BoxDecoration(
               color: AppColors.whiteCustom,
               borderRadius: const BorderRadius.all(Radius.circular(8))),
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
           child: Column(
             children: [
               Row(
@@ -88,7 +88,7 @@ class BalanceWidget extends StatelessWidget {
                 height: 10,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     "Ver Extrato",
@@ -98,7 +98,7 @@ class BalanceWidget extends StatelessWidget {
                         fontWeight: FontWeight.w600),
                   )
                 ],
-              )
+              ),
             ],
           ),
         ),
